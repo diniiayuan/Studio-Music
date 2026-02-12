@@ -24,6 +24,38 @@
         .dropdown-item:hover { background: var(--gold-accent); color: black; }
         .dropdown-divider { margin: 5px 0; border-color: #333; }
 
+        /* PERBAIKAN RESPONSIVE MOBILE (NAVBAR TENGAH) */
+        @media (max-width: 991.98px) {
+            .navbar-nav {
+                padding: 20px 0;
+            }
+            .nav-item {
+                width: 100%;
+                text-align: center;
+            }
+            .nav-link {
+                display: inline-block;
+                width: 100%;
+                margin: 5px 0;
+            }
+            .dropdown-menu {
+                position: static !important;
+                float: none;
+                width: 100%;
+                background: transparent !important;
+                border: none !important;
+                text-align: center;
+                box-shadow: none !important;
+            }
+            .dropdown-item {
+                padding: 10px 0 !important;
+            }
+            .dropdown-divider {
+                width: 50%;
+                margin: 5px auto;
+            }
+        }
+
         /* HEADER */
         .service-header { height: 60vh; background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.9)), url('https://images.unsplash.com/photo-1514525253361-bee8718a74a2?q=80&w=1600'); background-size: cover; background-position: center; display: flex; align-items: center; justify-content: center; text-align: center; }
         
@@ -48,16 +80,16 @@
         <a class="navbar-brand" href="index.html"><i class="bi bi-soundwave me-2"></i> ECHOVIBE</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"><span class="navbar-toggler-icon"></span></button>
         <div class="collapse navbar-collapse" id="mainNav">
-            <ul class="navbar-nav ms-auto align-items-center">
+            <ul class="navbar-nav ms-auto align-items-center w-100 text-center">
                 <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
                 <li class="nav-item"><a class="nav-link" href="about.html">About Studio</a></li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" style="color: var(--gold-accent) !important;">Services</a>
                     <ul class="dropdown-menu shadow">
-                        <li><a class="dropdown-item" href="tracking.html" >Recording / Tracking</a></li>
-                        <li><a class="dropdown-item" href="mixing.html" >Mixing & Mastering</a></li>
-                        <li><a class="dropdown-item" href="arranging.html"style="color: var(--gold-accent) !important; font-weight: 600; background: transparent;">Music Arrangement</a></li>
-                        <li><hr class="dropdown-divider my-1" style="border-color: #333;"></li>
+                        <li><a class="dropdown-item" href="tracking.html">Recording / Tracking</a></li>
+                        <li><a class="dropdown-item" href="mixing.html">Mixing & Mastering</a></li>
+                        <li><a class="dropdown-item" href="arranging.html" style="color: var(--gold-accent) !important; font-weight: 600; background: transparent;">Music Arrangement</a></li>
+                        <li><hr class="dropdown-divider my-1"></li>
                         <li><a class="dropdown-item" href="rehearsal.html">Rehearsal Room</a></li>
                     </ul>
                 </li>
@@ -101,7 +133,7 @@
                 <div class="info-box">
                     <span class="step-number">02</span>
                     <h4 class="fw-bold text-gold">Instrumentation</h4>
-                    <p class="text-white-p small">Pemilihan instrumen yang tepat apakah itu string section yang megah, synthesizer modern, atau brass yang berani.</p>
+                    <p class="text-white-p small">Pemilihan instrumen yang tepat—apakah itu string section yang megah, synthesizer modern, atau brass yang berani.</p>
                 </div>
             </div>
             <div class="col-md-4">
@@ -121,29 +153,29 @@
             <div class="col-lg-5">
                 <h2 class="fw-bold mb-4">VERSATILITY IN <span class="text-gold">GENRES</span></h2>
                 <p class="text-white-p">Apapun warna musik Anda, tim arranger kami memiliki pengalaman luas dalam berbagai spektrum audio.</p>
-                <p class="text-white-p small">Dari aransemen orkestra yang kompleks untuk scoring film hingga produksi pop electronic modern yang catchy.</p>
+                <p class="text-white-p small">Dari aransemen orkestra yang kompleks untuk scoring film hingga produksi pop-electronic modern yang catchy.</p>
             </div>
             <div class="col-lg-7">
                 <div class="row g-3">
-    <div class="col-6 col-md-4">
-        <div class="genre-card"><i class="bi bi-mic-fill text-gold"></i>Pop & RnB</div>
-    </div>
-    <div class="col-6 col-md-4">
-        <div class="genre-card"><i class="bi bi-film text-gold"></i>Cinematic</div>
-    </div>
-    <div class="col-6 col-md-4">
-        <div class="genre-card"><i class="bi bi-cpu-fill text-gold"></i>Electronic</div>
-    </div>
-    <div class="col-6 col-md-4">
-        <div class="genre-card"><i class="bi bi-lightning-charge-fill text-gold"></i>Rock & Indie</div>
-    </div>
-   <div class="col-6 col-md-4">
+                    <div class="col-6 col-md-4">
+                        <div class="genre-card"><i class="bi bi-mic-fill text-gold"></i>Pop & RnB</div>
+                    </div>
+                    <div class="col-6 col-md-4">
+                        <div class="genre-card"><i class="bi bi-film text-gold"></i>Cinematic</div>
+                    </div>
+                    <div class="col-6 col-md-4">
+                        <div class="genre-card"><i class="bi bi-cpu-fill text-gold"></i>Electronic</div>
+                    </div>
+                    <div class="col-6 col-md-4">
+                        <div class="genre-card"><i class="bi bi-lightning-charge-fill text-gold"></i>Rock & Indie</div>
+                    </div>
+                    <div class="col-6 col-md-4">
                         <div class="genre-card"><i class="bi bi-music-player-fill text-gold"></i>Jazz Fusion</div>
                     </div>
-    <div class="col-6 col-md-4">
-        <div class="genre-card"><i class="bi bi-megaphone-fill text-gold"></i>Commercial</div>
-    </div>
-</div>
+                    <div class="col-6 col-md-4">
+                        <div class="genre-card"><i class="bi bi-megaphone-fill text-gold"></i>Commercial</div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -171,7 +203,7 @@
                 <div class="fs-4">
                     <a href="https://www.instagram.com/" class="text-white me-3"><i class="bi bi-instagram"></i></a>
                     <a href="https://www.youtube.com/" class="text-white me-3"><i class="bi bi-youtube"></i></a>
-                    <a href="https://spotify.com/" class="text-white"><i class="bi bi-spotify"></i></a>
+                    <a href="http://spotify.com" class="text-white"><i class="bi bi-spotify"></i></a>
                 </div>
                 <p class="text-white-p small mt-4">© 2026 EchoVibe Studios Jakarta. All Rights Reserved.</p>
             </div>
@@ -181,5 +213,4 @@
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
-
 </html>
