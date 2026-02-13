@@ -24,6 +24,24 @@
         .dropdown-item:hover { background: var(--gold-accent); color: black; }
         .dropdown-divider { margin: 5px 0; border-color: #333; }
 
+        /* PERBAIKAN RESPONSIVE MOBILE (NAVBAR TENGAH) */
+        @media (max-width: 991.98px) {
+            .navbar-nav { padding: 20px 0; }
+            .nav-item { width: 100%; text-align: center; }
+            .nav-link { display: inline-block; width: 100%; margin: 5px 0; }
+            .dropdown-menu { 
+                position: static !important; 
+                float: none; 
+                width: 100%; 
+                background: transparent !important; 
+                border: none !important; 
+                text-align: center; 
+                box-shadow: none !important; 
+            }
+            .dropdown-item { padding: 10px 0 !important; }
+            .dropdown-divider { width: 50%; margin: 5px auto; border-color: #333 !important; }
+        }
+
         /* HEADER SECTION */
         .service-header { height: 60vh; background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.9)), url('https://images.unsplash.com/photo-1598653222000-6b7b7a552625?q=80&w=1600'); background-size: cover; background-position: center; display: flex; align-items: center; justify-content: center; text-align: center; }
         
@@ -44,7 +62,7 @@
         <a class="navbar-brand" href="index.html"><i class="bi bi-soundwave me-2"></i> ECHOVIBE</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"><span class="navbar-toggler-icon"></span></button>
         <div class="collapse navbar-collapse" id="mainNav">
-            <ul class="navbar-nav ms-auto align-items-center">
+            <ul class="navbar-nav ms-auto align-items-center w-100 text-center">
                 <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
                 <li class="nav-item"><a class="nav-link" href="about.html">About Studio</a></li>
                 <li class="nav-item dropdown">
@@ -75,7 +93,7 @@
 <header class="service-header">
     <div class="container">
         <h1 class="display-2 fw-bold mb-0">MIXING & <span class="text-gold">MASTERING</span></h1>
-        <p class="text-white-p fs-5 mt-3">High End Hybrid Processing for Professional Sound.</p>
+        <p class="text-white-p fs-5 mt-3">High-End Hybrid Processing for Professional Sound.</p>
     </div>
 </header>
 
@@ -129,7 +147,7 @@
     <div class="container">
         <div class="row gy-4">
             <div class="col-lg-4">
-                <h3 class="text-gold fw-bold">ECHOVIBE</h3>
+                <h3 class="text-gold fw-bold">ECHOVIBE_</h3>
                 <p class="text-white-p small mt-3">Studio musik kelas dunia yang didedikasikan untuk musisi yang mengejar kualitas audio tanpa batas.</p>
             </div>
             <div class="col-lg-4 offset-lg-4 text-lg-end">
@@ -137,15 +155,14 @@
                 <div class="fs-4">
                     <a href="https://www.instagram.com/" class="text-white me-3"><i class="bi bi-instagram"></i></a>
                     <a href="https://www.youtube.com/" class="text-white me-3"><i class="bi bi-youtube"></i></a>
-                    <a href="https://spotify.com/" class="text-white"><i class="bi bi-spotify"></i></a>
+                    <a href="http://googleusercontent.com/spotify.com/7" class="text-white"><i class="bi bi-spotify"></i></a>
                 </div>
                 <p class="text-white-p small mt-4">© 2026 EchoVibe Studios Jakarta. All Rights Reserved.</p>
             </div>
         </div>
     </div>
-</footer>>
+</footer>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
-
 </html>
