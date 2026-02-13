@@ -23,6 +23,24 @@
         .dropdown-item { color: white; padding: 5px 20px; font-size: 0.9rem; }
         .dropdown-item:hover { background: var(--gold-accent); color: black; }
 
+        /* PERBAIKAN RESPONSIVE MOBILE (NAVBAR TENGAH) */
+        @media (max-width: 991.98px) {
+            .navbar-nav { padding: 20px 0; }
+            .nav-item { width: 100%; text-align: center; }
+            .nav-link { display: inline-block; width: 100%; margin: 5px 0; }
+            .dropdown-menu { 
+                position: static !important; 
+                float: none; 
+                width: 100%; 
+                background: transparent !important; 
+                border: none !important; 
+                text-align: center; 
+                box-shadow: none !important; 
+            }
+            .dropdown-item { padding: 10px 0 !important; }
+            .dropdown-divider { width: 50%; margin: 5px auto; border-color: #333 !important; }
+        }
+
         /* GEAR STYLES */
         .gear-section { padding: 80px 0; border-bottom: 1px solid #222; }
         .gear-category-title { color: var(--gold-accent); font-weight: 800; border-left: 4px solid var(--gold-accent); padding-left: 15px; margin-bottom: 40px; }
@@ -41,7 +59,7 @@
         <a class="navbar-brand" href="index.html"><i class="bi bi-soundwave me-2"></i> ECHOVIBE</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"><span class="navbar-toggler-icon"></span></button>
         <div class="collapse navbar-collapse" id="mainNav">
-            <ul class="navbar-nav ms-auto align-items-center">
+            <ul class="navbar-nav ms-auto align-items-center w-100 text-center">
                 <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
                 <li class="nav-item"><a class="nav-link" href="about.html">About Studio</a></li>
                 <li class="nav-item dropdown">
@@ -57,9 +75,9 @@
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" style="color: var(--gold-accent) !important;">Equipments</a>
                     <ul class="dropdown-menu shadow">
-                        <li><a class="dropdown-item" href="gear.html#microphones" >Microphones</a></li>
-                        <li><a class="dropdown-item" href="gear.html#instruments" >Instruments</a></li>
-                        <li><a class="dropdown-item" href="gear.html#analog" >Analog Outboard</a></li>
+                        <li><a class="dropdown-item" href="gear.html#microphones">Microphones</a></li>
+                        <li><a class="dropdown-item" href="gear.html#instruments">Instruments</a></li>
+                        <li><a class="dropdown-item" href="gear.html#analog">Analog Outboard</a></li>
                     </ul>
                 </li>
                 <li class="nav-item"><a class="nav-link" href="portfolio.html">Portofolio</a></li>
@@ -183,7 +201,7 @@
                 <div class="fs-4">
                     <a href="https://www.instagram.com/" class="text-white me-3"><i class="bi bi-instagram"></i></a>
                     <a href="https://www.youtube.com/" class="text-white me-3"><i class="bi bi-youtube"></i></a>
-                    <a href="https://spotify.com/" class="text-white"><i class="bi bi-spotify"></i></a>
+                    <a href="http://googleusercontent.com/spotify.com/5" class="text-white"><i class="bi bi-spotify"></i></a>
                 </div>
                 <p class="text-white-p small mt-4">© 2026 EchoVibe Studios Jakarta. Hak Cipta Dilindungi.</p>
             </div>
