@@ -40,10 +40,17 @@
             }
             .dropdown-item { padding: 10px 0 !important; }
             .dropdown-divider { width: 50%; margin: 5px auto; border-color: #333 !important; }
+            
+            /* Font adjustment for mobile header */
+            .display-2 { font-size: 2.5rem !important; }
+            .service-header { height: 50vh; }
+            .section-padding { padding: 60px 0; }
+            footer { text-align: center !important; }
+            .text-lg-end { text-align: center !important; }
         }
 
         /* HEADER SECTION */
-        .service-header { height: 60vh; background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.9)), url('https://images.unsplash.com/photo-1598653222000-6b7b7a552625?q=80&w=1600'); background-size: cover; background-position: center; display: flex; align-items: center; justify-content: center; text-align: center; }
+        .service-header { height: 60vh; background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.9)), url('https://images.unsplash.com/photo-1598653222000-6b7b7a552625?q=80&w=1600'); background-size: cover; background-position: center; display: flex; align-items: center; justify-content: center; text-align: center; padding: 0 15px; }
         
         /* CONTENT STYLES */
         .info-box { background: var(--bg-card); border: 1px solid #222; padding: 40px; border-radius: 20px; height: 100%; transition: 0.3s; }
@@ -62,7 +69,7 @@
         <a class="navbar-brand" href="index.html"><i class="bi bi-soundwave me-2"></i> ECHOVIBE</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"><span class="navbar-toggler-icon"></span></button>
         <div class="collapse navbar-collapse" id="mainNav">
-            <ul class="navbar-nav ms-auto align-items-center w-100 text-center">
+            <ul class="navbar-nav ms-auto align-items-center w-100">
                 <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
                 <li class="nav-item"><a class="nav-link" href="about.html">About Studio</a></li>
                 <li class="nav-item dropdown">
@@ -99,11 +106,11 @@
 
 <section class="section-padding">
     <div class="container">
-        <div class="row g-5 mb-5 align-items-center">
+        <div class="row g-4 mb-5 align-items-center">
             <div class="col-lg-6">
                 <h2 class="fw-bold mb-4">THE <span class="text-gold">HYBRID PROCESS</span></h2>
                 <p class="text-white-p mb-4">Kami menggabungkan presisi digital dengan karakter harmonik dari perangkat analog outboard. Setiap lagu diproses melalui Analog Summing untuk mendapatkan dimensi stereo yang lebih lebar dan kedalaman yang tidak bisa didapatkan hanya dengan software.</p>
-                <div class="d-flex flex-wrap gap-2">
+                <div class="d-flex flex-wrap gap-2 mb-4 mb-lg-0">
                     <span class="analog-tag">ANALOG SUMMING</span>
                     <span class="analog-tag">VALVE SATURATION</span>
                     <span class="analog-tag">RADIO READY</span>
@@ -117,22 +124,22 @@
             </div>
         </div>
 
-        <div class="row g-4 mt-5">
-            <div class="col-md-4">
+        <div class="row g-4 mt-2 mt-lg-5">
+            <div class="col-lg-4 col-md-6">
                 <div class="info-box text-center">
                     <i class="bi bi-sliders2 text-gold display-5 mb-3"></i>
                     <h5 class="fw-bold">MIXING</h5>
                     <p class="text-white-p small">Balancing, EQ, Compression, dan detail automation untuk menghidupkan visi lagu Anda.</p>
                 </div>
             </div>
-            <div class="col-md-4">
+            <div class="col-lg-4 col-md-6">
                 <div class="info-box text-center">
                     <i class="bi bi-vinyl text-gold display-5 mb-3"></i>
                     <h5 class="fw-bold">MASTERING</h5>
                     <p class="text-white-p small">Tahap final agar lagu memiliki volume yang kompetitif dan siap untuk semua platform streaming.</p>
                 </div>
             </div>
-            <div class="col-md-4">
+            <div class="col-lg-4 col-md-12">
                 <div class="info-box text-center">
                     <i class="bi bi-file-music text-gold display-5 mb-3"></i>
                     <h5 class="fw-bold">STEMS</h5>
