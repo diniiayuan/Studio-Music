@@ -11,6 +11,7 @@
         :root { --gold-accent: #D4AF37; --bg-dark: #000000; --bg-card: #121212; --text-light: #ffffff; }
         body { font-family: 'Poppins', sans-serif; background-color: var(--bg-dark); color: var(--text-light); overflow-x: hidden; }
         h1, h2, h3, .navbar-brand { font-family: 'Montserrat', sans-serif; text-transform: uppercase; }
+        
         .navbar { background: rgba(0, 0, 0, 0.95) !important; padding: 15px 0; border-bottom: 2px solid var(--gold-accent); }
         .navbar-brand { font-size: 1.5rem; font-weight: 800; color: var(--gold-accent) !important; text-decoration: none; display: flex; align-items: center; }
         .nav-link { color: #ffffff !important; font-weight: 500; margin: 0 10px; transition: 0.3s; }
@@ -18,38 +19,26 @@
         .dropdown-menu { background: var(--bg-card); border: 1px solid var(--gold-accent); margin-top: 0; padding: 5px 0; }
         .dropdown-item { color: white; padding: 5px 20px; font-size: 0.9rem; }
         
-        /* PERBAIKAN RESPONSIVE MOBILE (NAVBAR TENGAH) */
+        /* RESPONSIVE NAVBAR & TEXT */
         @media (max-width: 991.98px) {
             .navbar-nav { padding: 20px 0; }
             .nav-item { width: 100%; text-align: center; }
             .nav-link { display: inline-block; width: 100%; margin: 5px 0; }
-            .dropdown-menu { 
-                position: static !important; 
-                float: none; 
-                width: 100%; 
-                background: transparent !important; 
-                border: none !important; 
-                text-align: center; 
-                box-shadow: none !important; 
-            }
+            .dropdown-menu { position: static !important; float: none; width: 100%; background: transparent !important; border: none !important; text-align: center; box-shadow: none !important; }
             .dropdown-item { padding: 10px 0 !important; }
             .dropdown-divider { width: 50%; margin: 5px auto; border-color: #333 !important; }
             
-            /* Penyesuaian font header di HP */
             .display-4 { font-size: 2.5rem !important; text-align: center; }
             section p { text-align: center; }
             .text-lg-end { text-align: center !important; }
-            footer { text-align: center; }
+            footer { text-align: center !important; }
         }
 
-        /* MODIFIKASI FORM AGAR PUTIH TERANG */
+        /* FORM STYLING */
         .form-control { background: #000; border: 1px solid #333; color: white !important; padding: 12px; }
         .form-control:focus { background: #050505; border-color: var(--gold-accent); box-shadow: none; color: white; }
-        
-        /* Membuat tulisan placeholder (Full name, dll) jadi putih */
         .form-control::placeholder { color: rgba(255,255,255,0.7) !important; }
         
-        /* Memperbaiki warna teks dan panah pada Select Service */
         select.form-control { color: white !important; background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='white' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m2 5 6 6 6-6'/%3e%3c/svg%3e"); background-repeat: no-repeat; background-position: right 0.75rem center; background-size: 16px 12px; appearance: none; }
         
         .text-gold { color: var(--gold-accent); }
@@ -61,7 +50,9 @@
 <nav class="navbar navbar-expand-lg sticky-top navbar-dark">
     <div class="container">
         <a class="navbar-brand" href="index.html"><i class="bi bi-soundwave me-2"></i> ECHOVIBE</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"><span class="navbar-toggler-icon"></span></button>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
         <div class="collapse navbar-collapse" id="mainNav">
             <ul class="navbar-nav ms-auto align-items-center w-100 text-center">
                 <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
@@ -105,6 +96,7 @@
                             <option selected disabled>Select Service</option>
                             <option>Recording Session</option>
                             <option>Mixing & Mastering</option>
+                            <option>Rehearsal Room</option>
                         </select>
                     </div>
                     <div class="mb-3"><textarea class="form-control" rows="5" placeholder="Your Message"></textarea></div>
@@ -116,8 +108,15 @@
                 <h3 class="fw-bold text-gold">VISIT US</h3>
                 <p class="text-white-p mb-1"><i class="bi bi-geo-alt me-2 text-gold"></i> Jl. Senopati No. 88, Jakarta Selatan</p>
                 <p class="text-white-p mb-4"><i class="bi bi-whatsapp me-2 text-gold"></i> +62 812 3456 7890</p>
+                
                 <div class="ratio ratio-16x9 border border-secondary shadow rounded overflow-hidden mb-4">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.255162464016!2d106.8055620745543!3d-6.23005086098679!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f143715f403f%3A0xc330752f971c260!2sJl.%20Senopati%20No.88%2C%20Selong%2C%20Kec.%20Kby.%20Baru%2C%20Kota%20Jakarta%20Selatan!5e0!3m2!1sid!2sid!4v1700000000000" allowfullscreen="" loading="lazy"></iframe>
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.255165507026!2d106.80496157585!3d-6.230053161011442!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f14545d16453%3A0xc4870f72023027b6!2sJl.%20Senopati%2C%20Kec.%20Kby.%20Baru%2C%20Kota%20Jakarta%20Selatan%2C%20Daerah%20Khusus%20Ibukota%20Jakarta!5e0!3m2!1sid!2sid!4v1700000000000!5m2!1sid!2sid" 
+                        style="border:0;" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
                 </div>
             </div>
         </div>
@@ -128,7 +127,7 @@
     <div class="container">
         <div class="row gy-4">
             <div class="col-lg-4">
-                <h3 class="text-gold fw-bold">ECHOVIBE</h3>
+                <h3 class="text-gold fw-bold">ECHOVIBE_</h3>
                 <p class="text-white-p small mt-3">Studio musik kelas dunia yang didedikasikan untuk musisi yang mengejar kualitas audio tanpa batas.</p>
             </div>
             <div class="col-lg-4 offset-lg-4 text-lg-end">
