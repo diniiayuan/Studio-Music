@@ -19,7 +19,7 @@
         .dropdown-menu { background: var(--bg-card); border: 1px solid var(--gold-accent); margin-top: 0; padding: 5px 0; }
         .dropdown-item { color: white; padding: 5px 20px; font-size: 0.9rem; }
         
-        /* RESPONSIVE NAVBAR & TEXT */
+        /* RESPONSIVE NAVBAR & TEXT - FIXED FOR MOBILE */
         @media (max-width: 991.98px) {
             .navbar-nav { padding: 20px 0; }
             .nav-item { width: 100%; text-align: center; }
@@ -28,10 +28,17 @@
             .dropdown-item { padding: 10px 0 !important; }
             .dropdown-divider { width: 50%; margin: 5px auto; border-color: #333 !important; }
             
-            .display-4 { font-size: 2.5rem !important; text-align: center; }
-            section p { text-align: center; }
-            .text-lg-end { text-align: center !important; }
-            footer { text-align: center !important; }
+            /* Menghapus text-align: center agar judul tetap rata kiri di HP */
+            .display-4 { font-size: 2.2rem !important; text-align: left !important; }
+            section p { text-align: left !important; }
+            
+            /* Memperbaiki alignment footer di mobile agar rata kiri */
+            .text-lg-end { text-align: left !important; }
+            footer { text-align: left !important; }
+            .fs-4 { margin-top: 10px; }
+            
+            /* Tambahan spasi antar kolom di mobile */
+            .col-lg-6 { margin-bottom: 40px; }
         }
 
         /* FORM STYLING */
@@ -111,7 +118,7 @@
                 
                 <div class="ratio ratio-16x9 border border-secondary shadow rounded overflow-hidden mb-4">
                     <iframe 
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.255165507026!2d106.80496157585!3d-6.230053161011442!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f14545d16453%3A0xc4870f72023027b6!2sJl.%20Senopati%2C%20Kec.%20Kby.%20Baru%2C%20Kota%20Jakarta%20Selatan%2C%20Daerah%20Khusus%20Ibukota%20Jakarta!5e0!3m2!1sid!2sid!4v1700000000000!5m2!1sid!2sid" 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.2736173426296!2d106.80496157586617!3d-6.227610160986958!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f14f6974971d%3A0x6739665f800c7104!2sJl.%20Senopati%20No.88%2C%20RT.7%2FRW.3%2C%20Selong%2C%20Kec.%20Kby.%20Baru%2C%20Kota%20Jakarta%20Selatan%2C%20Daerah%20Khusus%20Ibukota%20Jakarta%2012110!5e0!3m2!1sid!2sid!4v1709200000000!5m2!1sid!2sid" 
                         style="border:0;" 
                         allowfullscreen="" 
                         loading="lazy" 
@@ -135,7 +142,7 @@
                 <div class="fs-4">
                     <a href="https://www.instagram.com/" class="text-white me-3"><i class="bi bi-instagram"></i></a>
                     <a href="https://www.youtube.com/" class="text-white me-3"><i class="bi bi-youtube"></i></a>
-                    <a href="https://www.spotify.com/" class="text-white"><i class="bi bi-spotify"></i></a>
+                    <a href="https://open.spotify.com/" class="text-white"><i class="bi bi-spotify"></i></a>
                 </div>
                 <p class="text-white-p small mt-4">© 2026 EchoVibe Studios Jakarta. All Rights Reserved.</p>
             </div>
