@@ -40,10 +40,18 @@
             }
             .dropdown-item { padding: 10px 0 !important; }
             .dropdown-divider { width: 50%; margin: 5px auto; border-color: #333 !important; }
+            
+            /* Responsive adjustments for Rehearsal Room */
+            .display-2 { font-size: 2.8rem !important; }
+            .service-header { height: 50vh; }
+            .section-padding { padding: 60px 0; }
+            .info-box { padding: 30px 20px; }
+            footer { text-align: center !important; }
+            .text-lg-end { text-align: center !important; }
         }
 
         /* HEADER */
-        .service-header { height: 60vh; background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.9)), url('https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?q=80&w=1600'); background-size: cover; background-position: center; display: flex; align-items: center; justify-content: center; text-align: center; }
+        .service-header { height: 60vh; background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.9)), url('https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?q=80&w=1600'); background-size: cover; background-position: center; display: flex; align-items: center; justify-content: center; text-align: center; padding: 0 15px; }
         
         /* CONTENT STYLES */
         .info-box { background: var(--bg-card); border: 1px solid #222; padding: 40px; border-radius: 20px; height: 100%; transition: 0.3s; }
@@ -99,43 +107,47 @@
 
 <section class="section-padding">
     <div class="container">
-        <div class="row g-5 mb-5">
+        <div class="row g-4 g-lg-5 mb-5">
             <div class="col-lg-7">
                 <h2 class="fw-bold mb-4">THE <span class="text-gold">STAGE READY</span> EXPERIENCE</h2>
                 <p class="text-white-p mb-4">Ruang latihan kami dirancang khusus untuk memberikan pengalaman seperti di atas panggung besar. Dengan tata suara (Sound System) yang mumpuni dan akustik ruangan yang terkontrol, setiap sesi latihan Anda akan terdengar jernih dan detail.</p>
                 
-                <div class="row g-4 mt-2">
-                    <div class="col-md-6">
+                <div class="row g-3 g-md-4 mt-2">
+                    <div class="col-6 col-md-6">
                         <div class="amenity-card">
                             <h6 class="fw-bold text-gold"><i class="bi bi-speaker me-2"></i> PA SYSTEM</h6>
-                            <p class="text-white-p small">Active Speakers by QSC & Subwoofer untuk punch maksimal.</p>
+                            <p class="text-white-p small d-none d-md-block">Active Speakers by QSC & Subwoofer untuk punch maksimal.</p>
+                            <p class="text-white-p small d-md-none">QSC Active Speakers & Sub.</p>
                         </div>
                         <div class="amenity-card">
                             <h6 class="fw-bold text-gold"><i class="bi bi-thermometer-snow me-2"></i> COMFORT</h6>
-                            <p class="text-white-p small">Full AC, Sofa Area, dan High-speed Wi-Fi.</p>
+                            <p class="text-white-p small d-none d-md-block">Full AC, Sofa Area, dan High-speed Wi-Fi.</p>
+                            <p class="text-white-p small d-md-none">Full AC & Wi-Fi.</p>
                         </div>
                     </div>
-                    <div class="col-md-6">
+                    <div class="col-6 col-md-6">
                         <div class="amenity-card">
                             <h6 class="fw-bold text-gold"><i class="bi bi-mic me-2"></i> VOCAL MICS</h6>
-                            <p class="text-white-p small">Shure SM58 & Beta 58 untuk kejernihan vokal.</p>
+                            <p class="text-white-p small d-none d-md-block">Shure SM58 & Beta 58 untuk kejernihan vokal.</p>
+                            <p class="text-white-p small d-md-none">Shure SM58 & Beta 58.</p>
                         </div>
                         <div class="amenity-card">
                             <h6 class="fw-bold text-gold"><i class="bi bi-lightning-charge me-2"></i> STAGE LIGHTS</h6>
-                            <p class="text-white-p small">Ambient lighting yang bisa diatur sesuai vibe latihan.</p>
+                            <p class="text-white-p small d-none d-md-block">Ambient lighting yang bisa diatur sesuai vibe latihan.</p>
+                            <p class="text-white-p small d-md-none">Custom Ambient Light.</p>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="col-lg-5">
+            <div class="col-lg-5 mt-5 mt-lg-0">
                 <div class="info-box">
                     <h4 class="fw-bold text-gold mb-4">BACKLINE SPECS</h4>
                     <ul class="list-unstyled text-white-p small">
-                        <li class="mb-2"><strong>Drums:</strong> Tama Starclassic / Sabian Cymbals</li>
-                        <li class="mb-2"><strong>Guitar Amp 1:</strong> Marshall JCM900 Full Stack</li>
-                        <li class="mb-2"><strong>Guitar Amp 2:</strong> Roland Jazz Chorus-120</li>
-                        <li class="mb-2"><strong>Bass Amp:</strong> Ampeg SVT-4 Pro / 8x10 Cab</li>
-                        <li class="mb-2"><strong>Keys:</strong> Roland RD-2000 / Korg Kronos 2</li>
+                        <li class="mb-3 border-bottom border-secondary pb-2"><strong>Drums:</strong><br class="d-md-none"> Tama Starclassic / Sabian Cymbals</li>
+                        <li class="mb-3 border-bottom border-secondary pb-2"><strong>Guitar Amp 1:</strong><br class="d-md-none"> Marshall JCM900 Full Stack</li>
+                        <li class="mb-3 border-bottom border-secondary pb-2"><strong>Guitar Amp 2:</strong><br class="d-md-none"> Roland Jazz Chorus-120</li>
+                        <li class="mb-3 border-bottom border-secondary pb-2"><strong>Bass Amp:</strong><br class="d-md-none"> Ampeg SVT-4 Pro / 8x10 Cab</li>
+                        <li class="mb-3 pb-2"><strong>Keys:</strong><br class="d-md-none"> Roland RD-2000 / Korg Kronos 2</li>
                     </ul>
                 </div>
             </div>
