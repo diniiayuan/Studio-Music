@@ -9,7 +9,17 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <style>
         :root { --gold-accent: #D4AF37; --bg-dark: #000000; --bg-card: #121212; --text-light: #ffffff; }
-        body { font-family: 'Poppins', sans-serif; background-color: var(--bg-dark); color: var(--text-light); overflow-x: hidden; }
+
+        /* FIX: MENGUNCI LAYAR AGAR TIDAK BISA DIGESER SAMPING */
+        html, body { 
+            max-width: 100%; 
+            overflow-x: hidden; 
+            width: 100%;
+            margin: 0;
+            padding: 0;
+        }
+
+        body { font-family: 'Poppins', sans-serif; background-color: var(--bg-dark); color: var(--text-light); }
         h1, h2, h3, .navbar-brand { font-family: 'Montserrat', sans-serif; text-transform: uppercase; }
         
         .navbar { background: rgba(0, 0, 0, 0.95) !important; padding: 15px 0; border-bottom: 2px solid var(--gold-accent); }
@@ -28,17 +38,20 @@
             .dropdown-item { padding: 10px 0 !important; }
             .dropdown-divider { width: 50%; margin: 5px auto; border-color: #333 !important; }
             
-            /* Menghapus text-align: center agar judul tetap rata kiri di HP */
+            /* FIX: Menghilangkan margin negatif row di mobile */
+            .row {
+                margin-left: 0 !important;
+                margin-right: 0 !important;
+            }
+
             .display-4 { font-size: 2.2rem !important; text-align: left !important; }
             section p { text-align: left !important; }
             
-            /* Memperbaiki alignment footer di mobile agar rata kiri */
             .text-lg-end { text-align: left !important; }
             footer { text-align: left !important; }
             .fs-4 { margin-top: 10px; }
             
-            /* Tambahan spasi antar kolom di mobile */
-            .col-lg-6 { margin-bottom: 40px; }
+            .col-lg-6 { margin-bottom: 40px; padding-left: 0 !important; padding-right: 0 !important; }
         }
 
         /* FORM STYLING */
@@ -90,8 +103,7 @@
 </nav>
 
 <section class="py-5 mt-lg-5">
-    <div class="container">
-        <div class="row g-5">
+    <div class="container" style="overflow-x: hidden;"> <div class="row g-5">
             <div class="col-lg-6">
                 <h1 class="display-4 fw-bold mb-4">LET'S <span class="text-gold">TALK</span></h1>
                 <p class="text-white-p mb-4 mb-lg-5">Ingin booking studio atau tanya mengenai paket mixing? Isi form di bawah ini.</p>
@@ -118,7 +130,7 @@
                 
                 <div class="ratio ratio-16x9 border border-secondary shadow rounded overflow-hidden mb-4">
                     <iframe 
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.2736173426296!2d106.80496157586617!3d-6.227610160986958!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f14f6974971d%3A0x6739665f800c7104!2sJl.%20Senopati%20No.88%2C%20RT.7%2FRW.3%2C%20Selong%2C%20Kec.%20Kby.%20Baru%2C%20Kota%20Jakarta%20Selatan%2C%20Daerah%20Khusus%20Ibukota%20Jakarta%2012110!5e0!3m2!1sid!2sid!4v1709200000000!5m2!1sid!2sid" 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.2536896944626!2d106.805562!3d-6.230278!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNsKwMTMnNDkuMCJTIDEwNsKwNDgnMjAuMCJF!5e0!3m2!1sid!2sid!4v1645000000000!5m2!1sid!2sid" 
                         style="border:0;" 
                         allowfullscreen="" 
                         loading="lazy" 
@@ -132,7 +144,7 @@
 
 <footer class="py-5" style="background: #050505; border-top: 1px solid #222;">
     <div class="container">
-        <div class="row gy-4">
+        <div class="row gy-4" style="margin-left:0; margin-right:0;">
             <div class="col-lg-4">
                 <h3 class="text-gold fw-bold">ECHOVIBE_</h3>
                 <p class="text-white-p small mt-3">Studio musik kelas dunia yang didedikasikan untuk musisi yang mengejar kualitas audio tanpa batas.</p>
