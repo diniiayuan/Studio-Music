@@ -5,14 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>EchoVibe Studios | Home</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800;900&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <style>
         :root { --gold-accent: #D4AF37; --bg-dark: #000000; --bg-card: #121212; --text-light: #ffffff; }
         body { font-family: 'Poppins', sans-serif; background-color: var(--bg-dark); color: var(--text-light); overflow-x: hidden; }
         h1, h2, h3, .navbar-brand { font-family: 'Montserrat', sans-serif; text-transform: uppercase; }
         
-        /* NAVBAR */
+        /* NAVBAR UNIFORM */
         .navbar { background: rgba(0, 0, 0, 0.95) !important; padding: 15px 0; border-bottom: 2px solid var(--gold-accent); }
         .navbar-brand { font-size: 1.5rem; font-weight: 800; color: var(--gold-accent) !important; text-decoration: none; display: flex; align-items: center; }
         .nav-link { color: #ffffff !important; font-weight: 500; margin: 0 10px; transition: 0.3s; }
@@ -24,48 +24,35 @@
         .dropdown-item:hover { background: var(--gold-accent); color: black; }
         .dropdown-divider { margin: 5px 0; border-color: #333; }
 
-        /* HERO SECTION RESPONSIVE */
-        .hero { 
-            height: 85vh; 
-            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.8)), url('https://images.unsplash.com/photo-1590602847861-f357a9332bbc?q=80&w=1600'); 
-            background-size: cover; 
-            background-position: center; 
-            display: flex; 
-            align-items: center; 
+        /* PERBAIKAN RESPONSIVE MOBILE (NAVBAR TENGAH) */
+        @media (max-width: 991.98px) {
+            .navbar-nav { padding: 20px 0; }
+            .nav-item { width: 100%; text-align: center; }
+            .nav-link { display: inline-block; width: 100%; margin: 5px 0; }
+            .dropdown-menu { 
+                position: static !important; 
+                float: none; 
+                width: 100%; 
+                background: transparent !important; 
+                border: none !important; 
+                text-align: center; 
+                box-shadow: none !important; 
+            }
+            .dropdown-item { padding: 10px 0 !important; }
+            .dropdown-divider { width: 50%; margin: 5px auto; border-color: #333 !important; }
         }
-        
-        /* Font size otomatis: kecil di HP, besar di Desktop */
-        .hero-title { 
-            font-size: clamp(2.2rem, 8vw, 4.5rem); 
-            font-weight: 900; 
-            line-height: 1.1; 
-            letter-spacing: -1px;
-        }
+
+        .hero { height: 85vh; background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.8)), url('https://images.unsplash.com/photo-1590602847861-f357a9332bbc?q=80&w=1600'); background-size: cover; background-position: center; display: flex; align-items: center; }
+        .hero-title { font-size: 4.5rem; font-weight: 900; line-height: 1; }
         .hero-title span { color: var(--gold-accent); }
         
-        .lead { 
-            font-size: clamp(0.95rem, 2vw, 1.25rem); 
-            max-width: 700px;
-        }
-
-        /* FEATURE CARDS */
         .feature-card { background: var(--bg-card); border: 1px solid #222; border-radius: 15px; padding: 40px; transition: 0.3s; height: 100%; }
-        .feature-card:hover { border-color: var(--gold-accent); transform: translateY(-5px); }
         .icon-circle { width: 70px; height: 70px; background: var(--gold-accent); color: black; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 2rem; margin-bottom: 20px; }
         
-        /* UTILITIES */
-        .text-muted { color: #ffffff !important; opacity: 0.8; }
+        .text-muted { color: #ffffff !important; opacity: 0.9; }
         footer p, footer h6 { color: #ffffff !important; }
         .text-gold { color: var(--gold-accent); }
-        .section-padding { padding: clamp(60px, 10vw, 100px) 0; }
-
-        /* MEDIA QUERIES UNTUK HP */
-        @media (max-width: 768px) {
-            .hero { height: auto; padding: 120px 0 80px 0; text-align: center; }
-            .hero .d-flex { justify-content: center; flex-direction: column; gap: 15px !important; }
-            .hero .btn { width: 100%; }
-            .lead { margin-inline: auto; }
-        }
+        .section-padding { padding: 100px 0; }
     </style>
 </head>
 <body>
@@ -73,11 +60,9 @@
 <nav class="navbar navbar-expand-lg sticky-top navbar-dark">
     <div class="container">
         <a class="navbar-brand" href="index.html"><i class="bi bi-soundwave me-2"></i> ECHOVIBE</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
-            <span class="navbar-toggler-icon"></span>
-        </button>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"><span class="navbar-toggler-icon"></span></button>
         <div class="collapse navbar-collapse" id="mainNav">
-            <ul class="navbar-nav ms-auto align-items-center">
+            <ul class="navbar-nav ms-auto align-items-center w-100 text-center">
                 <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
                 <li class="nav-item"><a class="nav-link" href="about.html">About Studio</a></li>
                 <li class="nav-item dropdown">
@@ -108,10 +93,10 @@
 <header class="hero">
     <div class="container">
         <h1 class="hero-title">CAPTURE YOUR <br><span>LEGACY.</span></h1>
-        <p class="lead mt-3 mb-5 fw-light">EchoVibe Studios adalah pusat produksi audio profesional di Jakarta yang melayani artis nasional hingga internasional dengan standar high fidelity.</p>
+        <p class="lead mt-3 mb-5 fw-light">EchoVibe Studios adalah pusat produksi audio profesional di Jakarta yang melayani artis nasional hingga internasional dengan standar high-fidelity.</p>
         <div class="d-flex gap-3">
             <a href="#services" class="btn btn-outline-light btn-lg px-4">Our Services</a>
-            <a href="about.html" class="btn btn-warning btn-lg px-4 text-dark fw-bold" style="background: var(--gold-accent); border: none;">Take a Tour</a>
+            <a href="about.html" class="btn btn-warning btn-lg px-4 text-dark fw-bold" style="background: var(--gold-accent);">Take a Tour</a>
         </div>
     </div>
 </header>
@@ -154,9 +139,9 @@
             <div class="col-lg-4 offset-lg-4 text-lg-end">
                 <h6 class="fw-bold mb-3">FOLLOW US</h6>
                 <div class="fs-4">
-                    <a href="https://www.instagram.com/" class="text-white me-3"><i class="bi bi-instagram"></i></a>
-                    <a href="https://www.youtube.com/" class="text-white me-3"><i class="bi bi-youtube"></i></a>
-                    <a href="https://www.spotify.com/" class="text-white"><i class="bi bi-spotify"></i></a>
+                    <a href="https://www.instagram.com//" class="text-white me-3"><i class="bi bi-instagram"></i></a>
+                    <a href="https://www.youtube.com//" class="text-white me-3"><i class="bi bi-youtube"></i></a>
+                    <a href="http://googleusercontent.com/spotify.com/6" class="text-white"><i class="bi bi-spotify"></i></a>
                 </div>
                 <p class="text-muted small mt-4">© 2026 EchoVibe Studios Jakarta. All Rights Reserved.</p>
             </div>
@@ -167,4 +152,3 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
-
